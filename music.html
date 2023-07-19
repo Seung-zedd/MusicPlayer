@@ -120,6 +120,7 @@
     position: relative;
     height: 4px;
     border-radius: 4px;
+    display: block;
   }
   
   #s-area {
@@ -407,15 +408,12 @@ $(function () {
       ],
       w
       trackNames = [
-        "Ace-attorney-OST",
-        "Ace-attorney-OST",
-        "Ace-attorney-OST",
-
+        "Ace-attorney-OST"
         ],
-      albumArtworks = ["_1", "_1", "_1"],
+
+      albumArtworks = ["_1"],
+
       trackUrl = [
-        "https://raw.githubusercontent.com/Seung-zedd/MusicPlayer/main/Godot's Theme_ _The Fragrance of Dark Coffee_(Short ver).mp3",
-        "https://raw.githubusercontent.com/Seung-zedd/MusicPlayer/main/Godot's Theme_ _The Fragrance of Dark Coffee_(Short ver).mp3",
         "https://raw.githubusercontent.com/Seung-zedd/MusicPlayer/main/Godot's Theme_ _The Fragrance of Dark Coffee_(Short ver).mp3"
       ],
       playPreviousTrackButton = $("#play-previous"),
@@ -430,9 +428,12 @@ $(function () {
           checkBuffering();
           i.attr("class", "fas fa-pause");
           audio.play();
+          seekBar.parent().addClass("active"); // 재생바를 보이도록 설정
+          seekBar.css("display", "block");
           audio.addEventListener('ended', function() {
             document.getElementById("play-next").click();
             }, false);
+            
         } else {
           playerTrack.removeClass("active");
           albumArt.removeClass("active");
@@ -440,6 +441,7 @@ $(function () {
           albumArt.removeClass("buffering");
           i.attr("class", "fas fa-play");
           audio.pause();
+          seekBar.parent().removeClass("active"); // 재생바를 숨기도록 설정
         }
       }, 300);
     }
@@ -594,7 +596,7 @@ $(function () {
   
       selectTrack(0);
   
-      audio.loop = false;
+      audio.loop = true;
   
       playPauseButton.on("click", playPause);
   
