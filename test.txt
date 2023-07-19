@@ -1,0 +1,4 @@
+mp3파일 경로: https://raw.githubusercontent.com/Seung-zedd/MusicPlayer/main/Godot's Theme_ _The Fragrance of Dark Coffee_(Short ver).mp3
+
+img파일 경로: https://raw.githubusercontent.com/Seung-zedd/MusicPlayer/main/Pw3-cover-english.jpg
+

@@ -2,8 +2,8 @@ $(function () {
     var playerTrack = $("#player-track"),
       bgArtwork = $("#bg-artwork"),
       bgArtworkUrl,
-      albumName = $("#Godot's Theme_The Fragrance of Dark Coffee"),
-      trackName = $("#Ace-attorney-ost"),
+      albumName = $("#album-name"),
+      trackName = $("#track-name"),
       albumArt = $("#album-art"),
       sArea = $("#s-area"),
       seekBar = $("#seek-bar"),
@@ -30,26 +30,16 @@ $(function () {
       buffInterval = null,
       tFlag = false,
       albums = [
-        "Dawn",
-        "Me & You",
-        "Electro Boy",
-        "Home",
-        "Proxy (Original Mix)"
+        "Godot's Theme_ _The Fragrance of Dark Coffee_(Short ver)",
+        
       ],
       trackNames = [
-        "Skylike - Dawn",
-        "Alex Skrindo - Me & You",
-        "Kaaze - Electro Boy",
-        "Jordan Schor - Home",
-        "Martin Garrix - Proxy"
+        "Ace-attorney-OST",
+        
       ],
-      albumArtworks = ["_1", "_2", "_3", "_4", "_5"],
+      albumArtworks = ["_1"],
       trackUrl = [
-        "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/2.mp3",
-        "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/1.mp3",
-        "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/3.mp3",
-        "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/4.mp3",
-        "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/5.mp3"
+        "https://raw.githubusercontent.com/Seung-zedd/MusicPlayer/main/Godot's Theme_ _The Fragrance of Dark Coffee_(Short ver).mp3"
       ],
       playPreviousTrackButton = $("#play-previous"),
       playNextTrackButton = $("#play-next"),
